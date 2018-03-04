@@ -1,0 +1,17 @@
+{
+    "name": "BH1750",
+    "version": "1.0.0",
+    "description": "makecode BH1750 Digital Ambient Light Sensor Package for micro:bit",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true
+}
