@@ -40,7 +40,7 @@ get ambient light data
 
 MIT
 
-Copyright (c) 2018 microbit-makecode-packages
+Copyright (c) 2018, microbit/micropython Chinese community  
 
 ## Supported targets
 
