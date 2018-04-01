@@ -23,9 +23,10 @@ namespace BH1750 {
      * set BH1750 Digital Ambient Light Sensor I2C address, default is 35
      * @param is I2C address, eg: 35
      */
-    //% block
-    export function SetAddress(to: BH1750_ADDRESS): void {
-        if (to == BH1750_ADDRESS.A35)
+    //% blockId="BH1750_SET_ADDRESS" block="set Address %addr"
+    //% weight=100 blockGap=8
+    export function SetAddress(addr: BH1750_ADDRESS): void {
+        if (addr == BH1750_ADDRESS.A35)
             Address = 35
         else
             Address = 92
@@ -34,7 +35,8 @@ namespace BH1750 {
     /**
      * turn on BH1750.
      */
-    //% block
+    //% blockId="BH1750_ON" block="turn on"
+    //% weight=90 blockGap=8
     export function on(): void {
         pins.i2cWriteNumber(Address, 0x10, NumberFormat.UInt8BE)
     }
@@ -42,7 +44,8 @@ namespace BH1750 {
     /**
      * turn off BH1750, to reduce power consumption.
      */
-    //% block
+    //% blockId="BH1750_OFF" block="turn off"
+    //% weight=90 blockGap=8
     export function off(): void {
         pins.i2cWriteNumber(Address, 0, NumberFormat.UInt8BE)
     }
@@ -50,10 +53,11 @@ namespace BH1750 {
     /**
      * get ambient light data (lx)
      */
-    //% block
+    //% blockId="BH1750_GET_INTENSITY" block="get intensity (lx)"
+    //% weight=80 blockGap=8
     export function getIntensity(): number {
         return pins.i2cReadNumber(Address, NumberFormat.UInt16BE) * 5 / 6
     }
 
     on();
-}
+}  

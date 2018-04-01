@@ -22,8 +22,8 @@ to search box then search.
 
 ## API
 
-- SetAddress(to: BH1750_ADDRESS)  
-to is BH1750 address, it maybe 35 or 92  
+- SetAddress(addr: BH1750_ADDRESS)  
+addr is BH1750 address, it maybe 35 or 92  
 
 - on()  
 turn on BH1750.
