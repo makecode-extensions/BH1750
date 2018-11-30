@@ -4,18 +4,31 @@ makecode BH1750 Digital Ambient Light Sensor package for micro:bit
 
 Author: shaoziyang  
 Date:   2018.Mar  
-
-![](https://raw.githubusercontent.com/microbit-makecode-packages/BH1750/master/icon.png)  
   
-![](https://raw.githubusercontent.com/microbit-makecode-packages/BH1750/master/GY-30.jpg)
+![](GY-30.jpg)
 
-## usage
+## Add extension
 
-open your microbit makecode project, in Add Package, paste  
+open your microbit makecode project, in Add extension, paste  
 
 https://github.com/microbit-makecode-packages/BH1750  
 
 to search box then search.
+
+## Basic usage
+```
+let Intensity = 0
+BH1750.SetAddress(BH1750_ADDRESS.A35)
+led.plotBarGraph(
+100,
+100
+)
+basic.forever(() => {
+    Intensity = BH1750.getIntensity()
+    led.setBrightness(20 + Intensity / 512)
+    basic.pause(500)
+}) 
+```
 
 ## I2C Address  
 - 35/92 
@@ -36,7 +49,7 @@ get ambient light data
 
 ## Demo
 
-![](https://raw.githubusercontent.com/microbit-makecode-packages/BH1750/master/demo.jpg)
+![](demo.jpg)
 
 ## License
 
