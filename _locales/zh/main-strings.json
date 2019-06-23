@@ -1,0 +1,6 @@
+{
+    "BH1750.SetAddress|block": "设置I2C地址 %addr",
+    "BH1750.on|block": "打开 BH1750",
+    "BH1750.off|block": "关闭 BH1750",
+    "BH1750.getIntensity|block": "获取环境光强 (lx)"
+}
