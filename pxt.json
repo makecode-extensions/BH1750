@@ -8,8 +8,8 @@
     },
     "files": [
         "README.md",
-        "_locales/zh/main-strings.json",
-        "main.ts"
+        "_locales/zh/BH1750-strings.json",
+        "BH1750.ts"
     ],
     "testFiles": [
         "test.ts"
